@@ -1,0 +1,75 @@
+---
+server:
+  port: 8088
+
+---
+spring:
+  sendgrid:
+    api-key: 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
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 100MB
+      max-request-size: 100MB
+      file-size-threshold: 2KB
+#  redis:
+#    host: 10.60.105.38
+#    port: 8154
+#    ssl: false
+#    timeout: 12m
+#    jedis:
+#      pool:
+#        max-active: 1
+#        max-idle: 25
+#        max-wait: 30000ms
+#        min-idle: 5
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://118.70.52.20:5439/erp
+    driver-class-name: org.postgresql.Driver
+    username: erp
+    password: 4y8IHWPtc5AlEu9xWV3H
+    defaultSchema:
+    hikari:
+      idle-timeout: 10000
+      maximum-pool-size: 3
+    hibernate:
+#       hbm2ddl.method: create-drop
+
+  jpa:
+    hibernate:
+      show_sql: true
+      format_sql: true
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
+      temp:
+        use_jdbc_metadata_defaults: false
+
+  #huynv
+  import_properties:
+    folder_upload: D:/ERP_NEW/folder_upload
+    allow_file_ext: xlsx,jpg,JPG,png,PNG
+   
+file:
+  upload-dir: img/
+  input:
+    extentions: jpg,JPG,png,PNG
+
+
+
+
+
+
+#datasource:
+#  sampleapp:
+#    url: jdbc:oracle:thin:@118.70.52.20:1521:ERP
+#    username: ERP
+#    password: toprate@123
+#    driverClassName: oracle.jdbc.driver.OracleDriver
+#    defaultSchema:
+#    maxPoolSize: 10
+#    hibernate:
+#      hbm2ddl.method: create-drop
+#      show_sql: true
+#      format_sql: true
+#      dialect: org.hibernate.dialect.H2Dialect
