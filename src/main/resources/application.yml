@@ -5,7 +5,7 @@ server:
 ---
 spring:
   sendgrid:
-    api-key: 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
+    api-key: 
   servlet:
     multipart:
       enabled: true
